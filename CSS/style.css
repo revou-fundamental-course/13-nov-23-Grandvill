@@ -1,0 +1,61 @@
+/* Mark Header */
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: min-content;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.title-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mark Main */
+#main-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-section {
+  flex-basis: 60%;
+  flex-grow: 0;
+}
+
+.review-section img {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.message-us {
+  flex-basis: 40%;
+  flex-grow: 0;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-message-us {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-left: 24px;
+}
