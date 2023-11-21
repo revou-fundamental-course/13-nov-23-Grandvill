@@ -1,27 +1,15 @@
-$(function () {
-  $('#hamburger-menu').click(function (e) {
-    e.stopPropagation();
-    $('.nav-menu').toggleClass('show');
-  });
-
-  $(document).click(function (e) {
-    var container = $('.nav-menu');
-
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      container.removeClass('show');
-    }
-  });
-
-  $('.nav-menu a').click(function (e) {
-    var href = $(this).attr('href');
-    var section = $(href);
-    $('html, body').animate(
-      {
-        scrollTop: section.offset().top - 100,
-      },
-      1500,
-      'easeInOutExpo'
-    );
-    e.preventDefault();
-  });
-});
+let index = 0;
+displayImages();
+function displayImages() {
+  let i;
+  const images = document.getElementsByClassName('img');
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = 'none';
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index - 1].style.display = 'block';
+  setTimeout(displayImages, 2000);
+}

@@ -128,7 +128,9 @@ section#home .text-1 p {
 section#home .content {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 3rem;
+  margin: auto;
 }
 
 section#home .content .col-7 {
@@ -146,6 +148,20 @@ section#home .content .col-7 .img {
 
 section#home .content .col-7 .img img {
   width: 100%;
+}
+
+section#home .content .col-7 .img fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 section#home .content .col-7 .item {
@@ -441,6 +457,13 @@ footer > p {
   letter-spacing: 1px;
   color: var(--secondary);
   text-decoration: none;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
 }
 
 /* Media Query Medium */
