@@ -439,6 +439,7 @@ footer {
   padding: 3rem 4rem;
   position: relative;
   text-align: center;
+  background-color: black;
 }
 
 footer .logo {
@@ -455,7 +456,7 @@ footer .terms {
 footer .terms a,
 footer > p {
   letter-spacing: 1px;
-  color: var(--secondary);
+  color: white;
   text-decoration: none;
 }
 
